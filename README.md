@@ -2,7 +2,7 @@
 A forum web application about connecting pet lovers, saving animals, and educating the masses about animals and pets.
 
 # HOW TO SETUP
-On terminaL:
+On terminal:
 1. cd server
 2. npm install
 3. cd ..
