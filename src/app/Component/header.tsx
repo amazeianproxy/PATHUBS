@@ -20,7 +20,7 @@ export default function Header() {
             <div className="bg-[#FCD34D] text-black flex items-center justify-between px-6 py-4">
                 <Link href="/" className="cursor-pointer text-2xl font-bold">Home</Link>
                 <div className="text-2xl font-bold">LOGO</div>
-                <div className="text-2xl font-bold">Account</div>
+                <Link href="/Pages/Register" className="cursor-pointer text-2xl font-bold">Account</Link>
             </div>
 
             {/* Bottom Bar */}
