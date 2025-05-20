@@ -1,0 +1,118 @@
+"use client";
+
+import React from "react";
+import Link from "next/link";
+
+const Shelter1 = () => {
+  const animals = [
+    { id: 1, name: "Monique Wijaya", image: "/assets/kucing.jpg" },
+    { id: 2, name: "Pedro", image: "/assets/anjing.jpg" },
+  ];
+
+  return (
+    <main style={{ backgroundColor: "#fccc60", minHeight: "100vh", padding: "1rem" }}>
+      <header
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: "1rem",
+          position: "relative",
+        }}
+      >
+        {/* Tombol back */}
+        <Link
+          href="/Pages/Adopt"
+          style={{
+            position: "absolute",
+            left: 0,
+            fontSize: "1.5rem",
+            textDecoration: "none",
+            color: "black",
+            padding: "0.5rem 1rem",
+            backgroundColor: "white",
+            borderRadius: "50%",
+            userSelect: "none",
+            cursor: "pointer",
+          }}
+        >
+          ←
+        </Link>
+
+        <h1
+          style={{
+            backgroundColor: "white",
+            padding: "0.5rem 1.5rem",
+            borderRadius: "15px",
+            fontSize: "2.5rem",
+            margin: 0,
+            color: "black",
+          }}
+        >
+          Animal Shelter Bintaro
+        </h1>
+      </header>
+
+      {/* Daftar hewan besar */}
+      <div
+        style={{
+          display: "flex",
+          gap: "2rem",
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        {animals.map((animal) => (
+          <Link
+            key={animal.id}
+            href={`/Pages/Adopt/shelter1/pet${animal.id}`} // path menuju halaman pet1/page.tsx, pet2/page.tsx
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <div
+              style={{
+                backgroundColor: "white",
+                borderRadius: "20px",
+                overflow: "hidden",
+                width: 400,
+                cursor: "pointer",
+                boxShadow: "0 0 8px rgba(0,0,0,0.1)",
+                transition: "box-shadow 0.3s ease, transform 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                const el = e.currentTarget;
+                el.style.boxShadow = "0 10px 20px rgba(0,0,0,0.3)";
+                el.style.transform = "translateY(-10px)";
+              }}
+              onMouseLeave={(e) => {
+                const el = e.currentTarget;
+                el.style.boxShadow = "0 0 8px rgba(0,0,0,0.1)";
+                el.style.transform = "none";
+              }}
+            >
+              <img
+                src={animal.image}
+                alt={animal.name}
+                style={{ width: "100%", height: 400, objectFit: "cover" }}
+              />
+              <h2
+                style={{
+                  margin: "1rem 0",
+                  textAlign: "center",
+                  fontStyle: "italic",
+                  fontWeight: "600",
+                  fontSize: "2rem",
+                  color: "#000000",
+                  textUnderlineOffset: "8px",
+                }}
+              >
+                {animal.name}
+              </h2>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </main>
+  );
+};
+
+export default Shelter1;
