@@ -2,7 +2,7 @@ import Header from './Component/header';
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen overflow-y-hidden">
+    <div className="w-screen h-screen overflow-y-hidden bg-[#FCD34D] text-black">
       <Header/>
       <br></br>
       <br></br>

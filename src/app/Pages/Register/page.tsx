@@ -10,7 +10,7 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
 
     return (
-        <div>
+        <div className="bg-[#FCD34D] min-h-screen">
             <Header/>
             <br></br>
             <br></br>

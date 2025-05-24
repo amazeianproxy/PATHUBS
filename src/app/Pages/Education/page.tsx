@@ -5,12 +5,12 @@ import Header from "@/app/Component/header";
 import Link from "next/link";
 
 const mockPosts = [
-  { id: 1, title: 'How to Train a dragon?', image: 'https://upload.wikimedia.org/wikipedia/en/e/e8/Pokemon_Red_English_box_art.png' },
-  { id: 2, title: 'What is PawPetrol?', image: 'https://upload.wikimedia.org/wikipedia/en/e/e8/Pokemon_Red_English_box_art.png' },
-  { id: 3, title: 'Why pet is an animal?', image: 'https://upload.wikimedia.org/wikipedia/en/e/e8/Pokemon_Red_English_box_art.png' },
-  { id: 4, title: 'How to Train a dragon?', image: 'https://upload.wikimedia.org/wikipedia/en/e/e8/Pokemon_Red_English_box_art.png' },
-  { id: 5, title: 'How to Train a dragon?', image: 'https://upload.wikimedia.org/wikipedia/en/e/e8/Pokemon_Red_English_box_art.png' },
-  { id: 6, title: 'How to Train a dragon?', image: 'https://upload.wikimedia.org/wikipedia/en/e/e8/Pokemon_Red_English_box_art.png' },
+  { id: 1, title: 'How to Train a dragon?', image: '/assets/random.jpg' },
+  { id: 2, title: 'What is PawPetrol?', image: '/assets/random.jpg' },
+  { id: 3, title: 'Why pet is an animal?', image: '/assets/random.jpg' },
+  { id: 4, title: 'How to Train a dragon?', image: '/assets/random.jpg' },
+  { id: 5, title: 'How to Train a dragon?', image: '/assets/random.jpg' },
+  { id: 6, title: 'How to Train a dragon?', image: '/assets/random.jpg' },
 ];
 
 const Education = () => {

@@ -9,15 +9,15 @@ const shelters = [
     id: 1,
     name: "Animal Shelter Bintaro",
     description: "Di dominasi binatang anjing dan kucing dari newborn sampai dewasa",
-    image: "/assets/shelter1.jpg",
+    image: "/assets/random.jpg",
     linkAdop: "/adop",
     linkShelter: "/shelter1",
   },
   {
     id: 2,
-    name: "Animal Shelter Alam sutera",
+    name: "Animal Shelter Alam Sutera",
     description: "Memiliki beragam jenis binatang yang sehat dan siap dirawat",
-    image: "/assets/shelter2.jpg",
+    image: "/assets/random.jpg",
     linkAdop: "/adop",
     linkShelter: "/shelter2",
   },
@@ -25,7 +25,7 @@ const shelters = [
     id: 3,
     name: "Animal Shelter Gading Serpong",
     description: "Baru dibuka animal shelter baru pertama di Gading Serpong",
-    image: "/assets/shelter3.jpg",
+    image: "/assets/random.jpg",
     linkAdop: "/adop",
     linkShelter: "/shelter3",
   },
@@ -33,7 +33,7 @@ const shelters = [
     id: 4,
     name: "Animal Shelter BSD",
     description: "Animal Shelter anjing",
-    image: "/assets/shelter4.jpg",
+    image: "/assets/random.jpg",
     linkAdop: "/adop",
     linkShelter: "/shelter4",
   },
@@ -51,7 +51,7 @@ const Adopt: React.FC = () => {
       <Header />
       <main
         style={{
-          backgroundColor: "#fccc60",
+          backgroundColor: "#FCD34D",
           minHeight: "100vh",
           padding: "1rem",
         }}

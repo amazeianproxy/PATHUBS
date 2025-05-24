@@ -10,7 +10,7 @@ export default function Header() {
     const navItems = [
         { label: 'Lost Pet', href: '/Pages/LostPet' },
         { label: 'Adopt', href: '/Pages/Adopt' },
-        { label: 'Rescue', href: '/Pages/Rescue' },
+        { label: 'Education', href: '/Pages/Education' },
         { label: 'Forum', href: '/Pages/Forum' },
     ];
 
@@ -19,7 +19,7 @@ export default function Header() {
             {/* Top Bar */}
             <div className="bg-[#FCD34D] text-black flex items-center justify-between px-6 py-4">
                 <Link href="/" className="cursor-pointer text-2xl font-bold">Home</Link>
-                <div className="text-2xl font-bold">LOGO</div>
+                <div className="text-2xl font-bold">PATHUBS</div>
                 <Link href="/Pages/Register" className="cursor-pointer text-2xl font-bold">Account</Link>
             </div>
 
