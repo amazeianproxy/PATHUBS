@@ -9,15 +9,15 @@ const shelters = [
     id: 1,
     name: "Animal Shelter Bintaro",
     description: "Di dominasi binatang anjing dan kucing dari newborn sampai dewasa",
-    image: "/assets/random.jpg",
+    image: "/assets/shelter1.jpg",
     linkAdop: "/adop",
     linkShelter: "/shelter1",
   },
   {
     id: 2,
-    name: "Animal Shelter Alam Sutera",
+    name: "Animal Shelter Alam sutera",
     description: "Memiliki beragam jenis binatang yang sehat dan siap dirawat",
-    image: "/assets/random.jpg",
+    image: "/assets/shelter2.jpg",
     linkAdop: "/adop",
     linkShelter: "/shelter2",
   },
@@ -25,7 +25,7 @@ const shelters = [
     id: 3,
     name: "Animal Shelter Gading Serpong",
     description: "Baru dibuka animal shelter baru pertama di Gading Serpong",
-    image: "/assets/random.jpg",
+    image: "/assets/shelter3.jpg",
     linkAdop: "/adop",
     linkShelter: "/shelter3",
   },
@@ -33,7 +33,7 @@ const shelters = [
     id: 4,
     name: "Animal Shelter BSD",
     description: "Animal Shelter anjing",
-    image: "/assets/random.jpg",
+    image: "/assets/shelter4.jpg",
     linkAdop: "/adop",
     linkShelter: "/shelter4",
   },
@@ -51,7 +51,7 @@ const Adopt: React.FC = () => {
       <Header />
       <main
         style={{
-          backgroundColor: "#FCD34D",
+          backgroundColor: "#fccc60",
           minHeight: "100vh",
           padding: "1rem",
         }}
@@ -124,21 +124,21 @@ const Adopt: React.FC = () => {
             );
 
             if (shelter.linkShelter) {
-              return (
-                <Link
-                  key={shelter.id}
-                  href={`/Pages/Adopt/shelter1`}
-                  style={{
-                    textDecoration: "none",
-                    color: "inherit",
-                    display: "block",
-                    cursor: "pointer",
-                  }}
-                >
-                  {cardContent}
-                </Link>
-              );
-            }
+  return (
+    <Link
+      key={shelter.id}
+      href={`/Pages/Adopt${shelter.linkShelter}`}
+      style={{
+        textDecoration: "none",
+        color: "inherit",
+        display: "block",
+        cursor: "pointer",
+      }}
+    >
+      {cardContent}
+    </Link>
+  );
+}
 
             return <div key={shelter.id}>{cardContent}</div>;
           })}
