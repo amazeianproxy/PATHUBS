@@ -1,3 +1,12 @@
+WARNING: REQUIRED TO MAKE A FILE CALLED ".env.local".
+
+Paste below into ".env.local". Change the URL and the ANON Key to your specific one.
+
+```
+NEXT_PUBLIC_SUPABASE_URL=<Your URL>
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<Your ANON Key>
+```
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
