@@ -3,11 +3,49 @@
 import Header from "@/app/Component/header";
 import Link from "next/link";
 import React, { useState } from 'react';
+import { supabase } from "@/lib/supabase"; // Ensure Supabase is initialized
+import { useAuth } from "@/context/authContext"; // Import the Auth context
+import { useRouter } from "next/navigation";
 
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
+    const router = useRouter();
+    const { setSignedUp } = useAuth(); 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+
+    const handleLogin = async (e: React.FormEvent) => {
+        e.preventDefault(); // Prevent page refresh
+
+        if (!email || !password) {
+            setErrorMessage("Please enter both email and password.");
+            return;
+        }
+
+        const { data, error } = await supabase
+            .from("users")
+            .select("email, password, name")
+            .eq("email", email)
+            .eq("password", password)
+            .single();
+
+        if (error || !data) {
+            setErrorMessage("Invalid email or password.");
+            return;
+        }
+
+        // Check if password matches
+        if (data.password !== password) {
+            setErrorMessage("Invalid email or password.");
+            return;
+        }
+
+        // Successful login
+        setSignedUp(true);
+        localStorage.setItem("name", data.name);
+        localStorage.setItem("email", data.email);
+        router.push("/");
+    };    
 
     return (
         <div className="bg-[#FCD34D] min-h-screen">
@@ -24,23 +62,25 @@ const Login = () => {
 
                     {/* Form */}
                     <div className="p-6 space-y-4">
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="w-full px-4 py-3 rounded-full bg-[#423534] text-white placeholder-white shadow-md outline-none"
-                    />
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        className="w-full px-4 py-3 rounded-full bg-[#423534] text-white placeholder-white shadow-md outline-none"
-                    />
-                    <button className="w-full bg-[#FF8400] text-white font-medium py-3 rounded-full shadow-md hover:bg-orange-600 transition">
-                        Login
-                    </button>
+                    <form onSubmit={handleLogin} className="p-6 space-y-4">
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="w-full px-4 py-3 rounded-full bg-[#423534] text-white placeholder-white shadow-md outline-none"
+                        />
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className="w-full px-4 py-3 rounded-full bg-[#423534] text-white placeholder-white shadow-md outline-none"
+                        />
+                        <button className="w-full bg-[#FF8400] text-white font-medium py-3 rounded-full shadow-md hover:bg-orange-600 transition">
+                            Login
+                        </button>
+                    </form>
 
                     <div className="text-center font-medium text-gray-600 mt-4">Or</div>
 
