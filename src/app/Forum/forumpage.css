@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Consolas, monospace;
+  background-color: #FFDD75;
+}
+
+.forum-container {
+  padding: 20px;
+}
+
+.forum-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFCC33;
+  padding: 10px 20px;
+}
+
+.left-icons,
+.right-icons {
+  font-size: 24px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.forum-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #F2994A;
+  padding: 10px 0;
+}
+
+.forum-nav button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.forum-nav .active {
+  background-color: black;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.search-bar {
+  margin: 20px 0;
+  text-align: right;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  width: 250px;
+  font-size: 16px;
+  font-style: italic;
+  color: #666;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post-card {
+  display: flex;
+  background-color: #FFF1D6;
+  padding: 15px;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.post-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.post-content h2 {
+  margin: 0 0 10px 0;
+}
+
+.post-content p {
+  margin: 0;
+}
