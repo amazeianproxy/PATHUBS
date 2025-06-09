@@ -13,7 +13,7 @@ export default function ForumCard({ forum_id, title, content }: ForumCardProps) 
       <div className="post-card cursor-pointer">
         <img src="https://i.imgur.com/MK3eW3As.png" alt="sprite" className="post-img" />
         <div className="post-content">
-          <h2>{title}</h2>
+          <h2 className="text-xl font-bold">{title}</h2>
           <p>{content}</p>
         </div>
       </div>
