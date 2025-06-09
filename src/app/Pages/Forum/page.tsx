@@ -21,15 +21,17 @@ function ForumPage() {
     // add other fields if needed
   };
   
+  // Move fetchPosts outside so it can be reused
+  const fetchPosts = async () => {
+    const { data, error } = await supabase.from("forum_post").select("*");
+    if (error) {
+      console.error("Error fetching posts:", error.message);
+    } else {
+      setPosts(data);
+    }
+  };
+
   useEffect(() => {
-    const fetchPosts = async () => {
-        const { data, error } = await supabase.from("forum_post").select("*");
-        if (error) {
-          console.error("Error fetching posts:", error.message);
-        } else {
-          setPosts(data);
-        }
-      };
     fetchPosts();
   }, []);
   
@@ -62,7 +64,7 @@ function ForumPage() {
 
     setLoading(true);
 
-    const { error } = await supabase.from("posts").insert([
+    const { error } = await supabase.from("forum_post").insert([
       { title, content, user_id: userId }
     ]);
 
@@ -74,6 +76,7 @@ function ForumPage() {
       alert("Post created!");
       setTitle("");
       setContent("");
+      fetchPosts();
     }
   };
 
@@ -131,6 +134,8 @@ function ForumPage() {
           />
         ))}
       </div>
+      <br></br>
+      <br></br>
     </div>
   );
 }
