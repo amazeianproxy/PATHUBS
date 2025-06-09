@@ -51,7 +51,7 @@ const Adopt: React.FC = () => {
       <Header />
       <main
         style={{
-          backgroundColor: "#fccc60",
+          backgroundColor: "#FCD34D",
           minHeight: "100vh",
           padding: "1rem",
         }}

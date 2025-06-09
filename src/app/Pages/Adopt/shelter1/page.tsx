@@ -10,7 +10,7 @@ const Shelter1 = () => {
   ];
 
   return (
-    <main style={{ backgroundColor: "#fccc60", minHeight: "100vh", padding: "1rem" }}>
+    <main style={{ backgroundColor: "#FCD34D", minHeight: "100vh", padding: "1rem" }}>
       <header
         style={{
           display: "flex",

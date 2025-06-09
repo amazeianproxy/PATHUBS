@@ -11,7 +11,7 @@ const LostAnimalPage = () => {
 
       <main
         style={{
-          backgroundColor: "#fccc52",
+          backgroundColor: "#FCD34D",
           minHeight: "100vh",
           padding: "1rem",
         }}
@@ -19,7 +19,7 @@ const LostAnimalPage = () => {
         {/* Back Button - BELOW Header */}
         <div style={{ marginTop: "1rem", marginLeft: "1rem" }}>
           <Link
-            href="/home"
+            href="/"
             aria-label="Go back"
             style={{
               fontSize: "1.2rem",
