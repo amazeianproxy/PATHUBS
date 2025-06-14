@@ -4,7 +4,7 @@ import './forumpage.css';
 import Header from "@/app/Component/header";
 import React, { useState, useEffect } from "react";
 import ForumCard from '@/app/Component/forum_card';
-import { supabase } from "@/lib/supabase"; // Ensure Supabase is initialized
+import { supabase } from "@/lib/supabase";
 
 function ForumPage() {
   const [search, setSearch] = useState("");
@@ -18,10 +18,9 @@ function ForumPage() {
     forum_id: number;
     title: string;
     content: string;
-    // add other fields if needed
   };
   
-  // Move fetchPosts outside so it can be reused
+  
   const fetchPosts = async () => {
     const { data, error } = await supabase.from("forum_post").select("*");
     if (error) {
@@ -41,22 +40,22 @@ function ForumPage() {
       if (!email) return;
 
       const { data, error } = await supabase
-        .from("users") // your users table
-        .select("user_id")  // or "user_id" if that’s your column name
+        .from("users") 
+        .select("user_id") 
         .eq("email", email)
         .single();
 
       if (error) {
         console.error("Error fetching user ID:", error.message);
       } else {
-        setUserId(data.user_id); // or data.user_id
+        setUserId(data.user_id); 
       }
     };
 
     fetchUserId();
   }, []);
 
-  const handleNewPost = async () => {
+  const handleNewPost = async () => { 
     if (!title || !content) {
       alert("Please fill out all fields.");
       return;
@@ -89,20 +88,20 @@ function ForumPage() {
           <input
             type="text"
             placeholder="Post Title"
-            className="rounded px-4 py-2 shadow bg-white"
+            className="rounded px-4 py-2 shadow bg-white text-black"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
           <textarea
             placeholder="Post Content"
-            className="rounded px-4 py-2 shadow bg-white"
+            className="rounded px-4 py-2 shadow bg-white text-black"
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />
           <button
             onClick={handleNewPost}
             disabled={loading}
-            className="bg-blue-500 text-white rounded px-4 py-2 mt-2 hover:bg-blue-600"
+            className="bg-blue-500 text-black rounded px-4 py-2 mt-2 hover:bg-blue-600 "
           >
             {loading ? "Posting..." : "Create Post"}
           </button>
@@ -117,8 +116,8 @@ function ForumPage() {
         <input
           type="text"
           placeholder="Search Forum..."
-          className="rounded-full px-4 py-2 w-48 placeholder-gray-500 text-sm shadow-md focus:outline-none"
-          style={{ backgroundColor: 'white' }}
+          className="rounded-full px-4 py-2 w-48 placeholder-gray-500 text-sm shadow-md focus:outline-none text-black"
+          style={{ backgroundColor: 'white'  }}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />

@@ -69,14 +69,14 @@ const Pet1Page = () => {
         }}
       >
         <img
-          src="/assets/anjing2.jpg"
+          src="/assets/milo.png"
           alt="Keni"
           style={{ width: 200, height: 200, borderRadius: 15, objectFit: "cover" }}
         />
         <div style={{ flex: 1 }}>
           <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>Milo</h2>
           <p style={{ fontSize: "1.2rem", margin: "0.3rem 0", lineHeight: 1.5 }}>
-            Ras: Shit Tzu Mix
+            Ras: Shih Tzu Mix
           </p>
           <p style={{ fontSize: "1.2rem", margin: "0.3rem 0", lineHeight: 1.5 }}>
             Gender: Laki-Laki
@@ -100,7 +100,7 @@ const Pet1Page = () => {
           lineHeight: 1.6,
         }}
       >
-        Anak anjing dnegan bulu yang halus. Hobinya tidur dan suka gigit. Catatan : Vaksin hampir lengkap kecuali vaksin rabies.
+        Anak anjing dengan bulu yang halus. Hobinya tidur dan suka gigit. Catatan : Vaksin hampir lengkap kecuali vaksin rabies.
       </div>
 
       {/* Tombol kontak */}

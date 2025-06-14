@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const Shelter1 = () => {
   const animals = [
-    { id: 1, name: "Monique Wijaya", image: "/assets/kucing.jpg" },
-    { id: 2, name: "Pedro", image: "/assets/anjing.jpg" },
+    { id: 1, name: "Monique Wijaya", image: "/assets/monique.png" },
+    { id: 2, name: "Pedro", image: "/assets/pedro.png" },
   ];
 
   return (
@@ -63,9 +63,10 @@ const Shelter1 = () => {
       <div
         style={{
           display: "flex",
-          gap: "2rem",
+          gap: "3rem",
           justifyContent: "center",
           flexWrap: "wrap",
+          marginTop: "5rem",
         }}
       >
         {animals.map((animal) => (

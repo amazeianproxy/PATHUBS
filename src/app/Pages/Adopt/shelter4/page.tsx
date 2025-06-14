@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const Shelter4 = () => {
   const animals = [
-    { id: 1, name: "Fajar", image: "/assets/kura.jpg" },
-    { id: 2, name: "Letmino", image: "/assets/anjing4.jpg" },
+    { id: 1, name: "Fajar", image: "/assets/kura.png" },
+    { id: 2, name: "Letmino", image: "/assets/letmino.png" },
   ];
 
   return (
@@ -18,7 +18,7 @@ const Shelter4 = () => {
         </h1>
       </header>
 
-      <div style={{ display: "flex", gap: "2rem", justifyContent: "center", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", gap: "2rem", justifyContent: "center", flexWrap: "wrap", marginTop: "5rem",}}>
         {animals.map((animal) => (
           <Link key={animal.id} href={`/Pages/Adopt/shelter4/pet${animal.id}`} style={{ textDecoration: "none", color: "inherit" }}>
             <div style={{ backgroundColor: "white", borderRadius: "20px", overflow: "hidden", width: 400, cursor: "pointer", boxShadow: "0 0 8px rgba(0,0,0,0.1)", transition: "box-shadow 0.3s ease, transform 0.3s ease" }}
