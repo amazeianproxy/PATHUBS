@@ -19,6 +19,7 @@ function ForumPage() {
     forum_id: number;
     title: string;
     content: string;
+    image_url?: string | null;
     // add other fields if needed
   };
   
@@ -164,6 +165,7 @@ function ForumPage() {
             forum_id={post.forum_id}
             title={post.title}
             content={post.content}
+            image_url={post.image_url ?? undefined}
           />
         ))}
       </div>
