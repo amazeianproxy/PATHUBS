@@ -4,7 +4,7 @@ import './forumpage.css';
 import Header from "@/app/Component/header";
 import React, { useState, useEffect } from "react";
 import ForumCard from '@/app/Component/forum_card';
-import { supabase } from "@/lib/supabase"; // Ensure Supabase is initialized
+import { supabase } from "@/lib/supabase";
 
 function ForumPage() {
   const [search, setSearch] = useState("");
@@ -20,12 +20,13 @@ function ForumPage() {
     title: string;
     content: string;
     image_url?: string | null;
-    // add other fields if needed
   };
   
-  // Move fetchPosts outside so it can be reused
   const fetchPosts = async () => {
-    const { data, error } = await supabase.from("forum_post").select("*");
+    const { data, error } = await supabase
+      .from("forum_post")
+      .select("*")
+      .order("forum_id", { ascending: false }); // Most recent first
     if (error) {
       console.error("Error fetching posts:", error.message);
     } else {
@@ -43,15 +44,15 @@ function ForumPage() {
       if (!email) return;
 
       const { data, error } = await supabase
-        .from("users") // your users table
-        .select("user_id")  // or "user_id" if that’s your column name
+        .from("users")
+        .select("user_id") 
         .eq("email", email)
         .single();
 
       if (error) {
         console.error("Error fetching user ID:", error.message);
       } else {
-        setUserId(data.user_id); // or data.user_id
+        setUserId(data.user_id);
       }
     };
 
@@ -176,3 +177,5 @@ function ForumPage() {
 }
 
 export default ForumPage;
+
+// Ian Mulya Chiuandi membuat keseluruhan kode ini.

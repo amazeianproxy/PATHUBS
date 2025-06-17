@@ -11,8 +11,7 @@ export default function Home() {
     forum_id: number;
     title: string;
     content: string;
-    image_url?: string; // add image_url as an optional property
-    // add other fields if needed
+    image_url?: string;
   };
 
   const fetchPosts = async () => {
@@ -61,7 +60,7 @@ export default function Home() {
 
       {/* Urgent Posts Section */}
       <h2 className="text-2xl font-semibold mb-4 px-20 text-black">Urgent Posts</h2>
-      <section className="bg-[#473939] text-white p-4 pt-6 min-h-[calc(100vh-300px)]">
+      <section className="bg-[#473939] text-white min-h-[calc(100vh-300px)]">
         <div className="flex flex-wrap gap-10 px-20 py-8 justify-center">
           {posts.slice(1, 5).map((post) => (
             <div
@@ -83,6 +82,10 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <br></br>
+      <br></br>
     </div>
   );
 }
+
+// Ian Mulya Chiuandi membuat keseluruhan kode ini.

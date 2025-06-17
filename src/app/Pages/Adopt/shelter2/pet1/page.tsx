@@ -69,7 +69,7 @@ const Pet1Page = () => {
         }}
       >
         <img
-          src="/assets/rico_coco.png"
+          src="/assets/kucing2.jpg"
           alt="Keni"
           style={{ width: 200, height: 200, borderRadius: 15, objectFit: "cover" }}
         />

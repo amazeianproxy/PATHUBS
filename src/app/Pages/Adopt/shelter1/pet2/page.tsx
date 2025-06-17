@@ -69,7 +69,7 @@ const Pet2Page = () => {
         }}
       >
         <img
-          src="/assets/pedro.png"
+          src="/assets/anjing.jpg"
           alt="Pedro"
           style={{ width: 200, height: 200, borderRadius: 15, objectFit: "cover" }}
         />

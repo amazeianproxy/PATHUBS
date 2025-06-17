@@ -3,8 +3,8 @@
 import Header from "@/app/Component/header";
 import Link from "next/link";
 import React, { useState } from 'react';
-import { supabase } from "@/lib/supabase"; // Ensure Supabase is initialized
-import { useAuth } from "@/context/authContext"; // Import the Auth context
+import { supabase } from "@/lib/supabase";
+import { useAuth } from "@/context/authContext";
 import { useRouter } from "next/navigation";
 
 const Register = () => {
@@ -14,7 +14,6 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState("");
 
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault(); // Prevent page refresh
@@ -31,7 +30,7 @@ const Register = () => {
         if (error) {
             console.error("Error inserting data:", error);
         } else {
-            console.log("Data inserted:", data);
+            // console.log("Data inserted:", data);
             setName("");
             setEmail("");
             setPassword("");
@@ -95,13 +94,6 @@ const Register = () => {
                             Register
                         </button>
                     </form>
-
-                    <div className="text-center font-medium text-gray-600 mt-4">Or</div>
-
-                    <button className="flex items-center justify-center gap-3 bg-neutral-100 rounded-full py-2 px-4 w-full shadow-md hover:bg-neutral-200">
-                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" className="w-6 h-6" />
-                        <span className="text-black font-medium">Continue with Google</span>
-                    </button>
                     </div>
             </div>
         </div>
@@ -110,3 +102,5 @@ const Register = () => {
 };
 
 export default Register;
+
+// Ian Mulya Chiuandi membuat keseluruhan kode ini.

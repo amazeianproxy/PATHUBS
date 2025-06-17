@@ -20,7 +20,6 @@ export default function Header() {
       return;
     }
 
-    // Fetch user name from your users table by email
     const fetchUserName = async () => {
       setLoading(true);
       const { data, error } = await supabase
@@ -60,7 +59,7 @@ export default function Header() {
   return (
     <header className="w-full">
       <div className="bg-[#FCD34D] text-black flex items-center justify-between px-6 py-4">
-        <Link href="/" className="cursor-pointer text-2xl font-bold">
+        <Link href="/" className="cursor-pointer text-2xl font-bold transition-colors duration-200 hover:text-[#eb3434]">
           Home
         </Link>
         <div className="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold pointer-events-none select-none">
@@ -78,7 +77,7 @@ export default function Header() {
               <span className="text-2xl font-bold cursor-default">{userName}</span>
             </>
           ) : (
-            <Link href="/Pages/Register" className="cursor-pointer text-2xl font-bold">
+            <Link href="/Pages/Register" className="cursor-pointer text-2xl font-bold transition-colors duration-200 hover:text-[#eb3434]">
               Account
             </Link>
           )}
@@ -104,3 +103,5 @@ export default function Header() {
     </header>
   );
 }
+
+// Ian Mulya Chiuandi membuat keseluruhan kode ini.
