@@ -8,6 +8,9 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzd
 ```
 
 You may need to do "npm install" first before running for the first time, which will install node_modules.
+```bash
+npm install
+```
 
 Finally, run the development server:
 
