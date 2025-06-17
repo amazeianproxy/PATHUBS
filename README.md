@@ -1,3 +1,5 @@
+# How to Run
+
 WARNING: REQUIRED TO MAKE A FILE CALLED ".env.local".
 
 Paste below into ".env.local". This will connect you to the database.
