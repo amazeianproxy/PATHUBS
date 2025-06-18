@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Pet2Page = () => {
   return (
-    <main style={{ backgroundColor: "#fccc60", minHeight: "100vh", padding: "1rem" }}>
+    <main style={{ backgroundColor: "#fccc60", minHeight: "100vh", padding: "5rem" }}>
       <header
         style={{
           display: "flex",
@@ -17,7 +17,7 @@ const Pet2Page = () => {
       >
         {/* Tombol kembali */}
         <Link
-  href="/Pages/Adopt"
+  href="/Pages/Adopt/shelter1"
   style={{
     position: "absolute",
     left: 0,

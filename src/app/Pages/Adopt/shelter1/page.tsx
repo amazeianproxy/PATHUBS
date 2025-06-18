@@ -10,7 +10,7 @@ const Shelter1 = () => {
   ];
 
   return (
-    <main style={{ backgroundColor: "#FCD34D", minHeight: "100vh", padding: "1rem" }}>
+    <main style={{ backgroundColor: "#FCD34D", minHeight: "100vh", padding: "5rem" }}>
       <header
         style={{
           display: "flex",
@@ -22,28 +22,28 @@ const Shelter1 = () => {
       >
         {/* Tombol back */}
         <Link
-  href="/Pages/Adopt"
-  style={{
-    position: "absolute",
-    left: 0,
-    padding: "0.5rem 1rem",
-    backgroundColor: "white",
-    borderRadius: "50%",
-    userSelect: "none",
-    cursor: "pointer",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "48px",
-    height: "48px",
-  }}
->
-  <img
-    src="/assets/back.png"
-    alt="Back"
-    style={{ width: "24px", height: "24px", objectFit: "contain" }}
-  />
-</Link>
+          href="/Pages/Adopt"
+          style={{
+            position: "absolute",
+            left: 0,
+            padding: "0.5rem 1rem",
+            backgroundColor: "white",
+            borderRadius: "50%",
+            userSelect: "none",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "48px",
+            height: "48px",
+          }}
+        >
+          <img
+            src="/assets/back.png"
+            alt="Back"
+            style={{ width: "24px", height: "24px", objectFit: "contain" }}
+          />
+        </Link>
 
         <h1
           style={{
@@ -63,9 +63,10 @@ const Shelter1 = () => {
       <div
         style={{
           display: "flex",
-          gap: "2rem",
+          gap: "3rem",
           justifyContent: "center",
           flexWrap: "wrap",
+          marginTop: "5rem",
         }}
       >
         {animals.map((animal) => (

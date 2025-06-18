@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Pet1Page = () => {
   return (
-    <main style={{ backgroundColor: "#fccc60", minHeight: "100vh", padding: "1rem" }}>
+    <main style={{ backgroundColor: "#fccc60", minHeight: "100vh", padding: "5rem" }}>
       <header
         style={{
           display: "flex",
@@ -15,30 +15,31 @@ const Pet1Page = () => {
           position: "relative",
         }}
       >
-        {/* Tombol kembali */}
+        {/* Tombol back */}
         <Link
-  href="/Pages/Adopt"
-  style={{
-    position: "absolute",
-    left: 0,
-    padding: "0.5rem 1rem",
-    backgroundColor: "white",
-    borderRadius: "50%",
-    userSelect: "none",
-    cursor: "pointer",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "48px",
-    height: "48px",
-  }}
->
-  <img
-    src="/assets/back.png"
-    alt="Back"
-    style={{ width: "24px", height: "24px", objectFit: "contain" }}
-  />
-</Link>
+          href="/Pages/Adopt/shelter1"
+          style={{
+            position: "absolute",
+            left: 0,
+            padding: "0.5rem 1rem",
+            backgroundColor: "white",
+            borderRadius: "50%",
+            userSelect: "none",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "48px",
+            height: "48px",
+          }}
+        >
+          <img
+            src="/assets/back.png"
+            alt="Back"
+            style={{ width: "24px", height: "24px", objectFit: "contain" }}
+          />
+        </Link>
+
         {/* Judul */}
         <h1
           style={{
@@ -105,31 +106,31 @@ const Pet1Page = () => {
 
       {/* Tombol kontak */}
       <button
-  style={{
-    backgroundColor: "#2ca41c",
-    color: "white",
-    border: "none",
-    borderRadius: "25px",
-    padding: "0.75rem 2rem",
-    fontSize: "1.2rem",
-    cursor: "pointer",
-    display: "flex",
-    alignItems: "center",
-    gap: "0.75rem",
-    margin: "0 auto",
-  }}
-  onClick={() => {
-    window.open("https://wa.me/6282124600350", "_blank");
-  }}
-  aria-label="Contact Shelter via WhatsApp"
->
-  <img
-    src="/assets/whatsapp.png"
-    alt="WhatsApp"
-    style={{ width: "24px", height: "24px" }}
-  />
-  Contact Shelter
-</button>
+        style={{
+          backgroundColor: "#2ca41c",
+          color: "white",
+          border: "none",
+          borderRadius: "25px",
+          padding: "0.75rem 2rem",
+          fontSize: "1.2rem",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          gap: "0.75rem",
+          margin: "0 auto",
+        }}
+        onClick={() => {
+          window.open("https://wa.me/6282124600350", "_blank");
+        }}
+        aria-label="Contact Shelter via WhatsApp"
+      >
+        <img
+          src="/assets/whatsapp.png"
+          alt="WhatsApp"
+          style={{ width: "24px", height: "24px" }}
+        />
+        Contact Shelter
+      </button>
     </main>
   );
 };

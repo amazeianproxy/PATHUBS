@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Pet1Page = () => {
   return (
-    <main style={{ backgroundColor: "#fccc60", minHeight: "100vh", padding: "1rem" }}>
+    <main style={{ backgroundColor: "#fccc60", minHeight: "100vh", padding: "5rem" }}>
       <header
         style={{
           display: "flex",
@@ -17,22 +17,22 @@ const Pet1Page = () => {
       >
         {/* Tombol kembali */}
         <Link
-  href="/Pages/Adopt"
-  style={{
-    position: "absolute",
-    left: 0,
-    padding: "0.5rem 1rem",
-    backgroundColor: "white",
-    borderRadius: "50%",
-    userSelect: "none",
-    cursor: "pointer",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "48px",
-    height: "48px",
-  }}
->
+          href="/Pages/Adopt/shelter4"
+          style={{
+            position: "absolute",
+            left: 0,
+            padding: "0.5rem 1rem",
+            backgroundColor: "white",
+            borderRadius: "50%",
+            userSelect: "none",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "48px",
+            height: "48px",
+          }}
+        >
   <img
     src="/assets/back.png"
     alt="Back"

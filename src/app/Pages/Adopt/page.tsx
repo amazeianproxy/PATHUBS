@@ -8,7 +8,7 @@ const shelters = [
   {
     id: 1,
     name: "Animal Shelter Bintaro",
-    description: "Di dominasi binatang anjing dan kucing dari newborn sampai dewasa",
+    description: "Memiliki berbagai binatang Unggas seperti burung, ayam, elang dan lain-lain ",
     image: "/assets/shelter1.jpg",
     linkAdop: "/adop",
     linkShelter: "/shelter1",
@@ -16,7 +16,7 @@ const shelters = [
   {
     id: 2,
     name: "Animal Shelter Alam sutera",
-    description: "Memiliki beragam jenis binatang yang sehat dan siap dirawat",
+    description: "Memiliki beragam jenis binatang yang sehat dan siap dirawat, kapanpun anda mau",
     image: "/assets/shelter2.jpg",
     linkAdop: "/adop",
     linkShelter: "/shelter2",
@@ -24,7 +24,7 @@ const shelters = [
   {
     id: 3,
     name: "Animal Shelter Gading Serpong",
-    description: "Baru dibuka animal shelter baru pertama di Gading Serpong",
+    description: "Memiliki beragam jenis hewan buas seperti ular, komodo, buaya dan lain-lain ",
     image: "/assets/shelter3.jpg",
     linkAdop: "/adop",
     linkShelter: "/shelter3",
@@ -32,7 +32,7 @@ const shelters = [
   {
     id: 4,
     name: "Animal Shelter BSD",
-    description: "Animal Shelter anjing",
+    description: "Memiliki berbagai jenis hewan ras yang langka seperti kucing British Short Hair",
     image: "/assets/shelter4.jpg",
     linkAdop: "/adop",
     linkShelter: "/shelter4",
@@ -86,7 +86,7 @@ const Adopt: React.FC = () => {
             align-items: center;
             padding: 1rem;
             border-radius: 20px;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
             color: black;
             transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -98,7 +98,7 @@ const Adopt: React.FC = () => {
           }
 
           .shelter-image {
-            width: 150px;
+            width: 200px;
             height: 100px;
             border-radius: 15px;
             object-fit: cover;
